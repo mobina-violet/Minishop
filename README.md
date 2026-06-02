@@ -139,5 +139,15 @@ npm run build
 ---
 
 ## Author
+a
 
-Developed by Mobina as a React + TypeScript learning project.
+Frontend Developer focused on React, TypeScript, and modern web technologies.
+
+This project was built to practice:
+
+React & TypeScript
+Redux Toolkit
+React Router
+Form Validation with React Hook Form & Zod
+Responsive UI Design with Tailwind CSS
+Animations with Framer Motion
