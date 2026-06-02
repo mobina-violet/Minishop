@@ -16,7 +16,6 @@ function ProductCard({ product }: Props) {
   const cartItem = cartItems.find((item) => item.id === product.id);
 
   return (
-    
     <motion.div
       whileHover={{
         scale: 1.03,
@@ -41,9 +40,9 @@ function ProductCard({ product }: Props) {
         whileTap={{ scale: 0.95 }}
         onClick={() => dispatch(addToCart(product))}
         className={`mt-auto px-4 py-2 rounded-lg text-white transition-colors duration-300 ${
-          cartItem ? "bg-violet-900" : "bg-black"
+          cartItem ? "bg-violet-900" : "bg-violet-600"
         }`}>
-        {cartItem ? `In Cart (${cartItem.quantity})` : "Add To Cart"}
+     {cartItem ? `Added (${cartItem.quantity})` : "Add To Cart"}
       </motion.button>
     </motion.div>
   );

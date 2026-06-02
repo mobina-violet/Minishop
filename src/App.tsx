@@ -12,27 +12,30 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Navbar />
+    <div className="flex flex-col min-h-screen">
+        <Navbar />
 
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Home
-              search={search}
-              setSearch={setSearch}
-              category={category}
-              setCategory={setCategory}
+        <main className="flex-1">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Home
+                  search={search}
+                  setSearch={setSearch}
+                  category={category}
+                  setCategory={setCategory}
+                />
+              }
             />
-          }
-        />
+            <Route path="/cart" element={<CartPage />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/product/:id" element={<ProductDetails />} />
+          </Routes>
+        </main>
 
-        <Route path="/cart" element={<CartPage />} />
-        <Route path="/checkout" element={<Checkout />} />
-        <Route path="/product/:id" element={<ProductDetails />} />
-      </Routes>
-
-      <Footer />
+        <Footer />
+      </div>
     </BrowserRouter>
   );
 }
